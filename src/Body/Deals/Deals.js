@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../Categories/Categories.css';
+import '../Deals/Deals.css';
 
 function Deals(){
     const [discount, setDiscount] = useState([]);
@@ -12,13 +12,14 @@ function Deals(){
     }  
     ,[]);
     return(
-        <div className="Categories_cointainer">
+        <div className="DealsCategories_cointainer">
             <h2>Top Offers & Deals</h2>
-        <div className="products_cointainer">
+        <div className="Dealsproducts_cointainer">
           {discount.map((product) => (
-            <div key={product.id} className=" Categories_item" >
-                <img src={product.images} className="Categories_images"/> 
-                <div className= " Categories_text">{product.category} </div>
+            <div key={product.id} className=" DealsCategories_item" >
+                <img src={product.images} className="DealsCategories_images"/> 
+                <div className="DealsCategories_price">{product.price}</div>
+                <div className= " DealsCategories_text">{product.title} </div>
                 
             </div>
           ))}

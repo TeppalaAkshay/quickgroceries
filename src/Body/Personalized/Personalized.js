@@ -18,7 +18,7 @@ function Personalized(){
           {foryou.map((product) => (
             <div key={product.id} className=" Categories_item" >
                 <img src={product.images} className="Categories_images"/> 
-                <div className= " Categories_text">{product.category} </div>
+                <div className= " Categories_text">{product.title} {product.price}/{product.weight} </div>
                 
             </div>
           ))}
