@@ -5,6 +5,7 @@ import './Header/HeadNavCSS/Header.css';
 import ImageSection from './Body/ImageSection';
 import Categories from './Body/Categories/Categories';
 import Deals from './Body/Deals/Deals';
+import Personalized from './Body/Personalized/Personalized';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ImageSection/>
       <Categories/>
       <Deals/>
+      <Personalized/>
 
     </div>
   );

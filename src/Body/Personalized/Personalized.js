@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import '../Categories/Categories.css';
 
-function Deals(){
-    const [discount, setDiscount] = useState([]);
+function Personalized(){
+    const [foryou, setForyou] = useState([]);
     useEffect( () =>{
         fetch('https://dummyjson.com/products')
         .then(response=>response.json())
-        .then(result => setDiscount(result.products))
+        .then(result => setForyou(result.products))
         .catch(error => console.error('Error fetching data:', error));
 
     }  
     ,[]);
     return(
         <div className="Categories_cointainer">
-            <h2>Top Offers & Deals</h2>
+            <h2>Personalized For You</h2>
         <div className="products_cointainer">
-          {discount.map((product) => (
+          {foryou.map((product) => (
             <div key={product.id} className=" Categories_item" >
                 <img src={product.images} className="Categories_images"/> 
                 <div className= " Categories_text">{product.category} </div>
@@ -27,4 +27,4 @@ function Deals(){
           );
         }
 
-export default Deals;
+export default Personalized;
